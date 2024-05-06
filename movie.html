@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCP1 PDW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom CSS for this page */
+        h1 {
+            font-size: 40px;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: rgb(66, 74, 77);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            margin: 20px;
+            transition: transform 0.3s ease;
+            position: relative; /* Tambahkan properti position */
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        .circle p {
+            margin: 0; /* Hilangkan margin bawaan */
+            position: absolute; /* Atur posisi absolut */
+            top: 50%; /* Geser ke atas setengah dari tinggi lingkaran */
+            left: 50%; /* Geser ke kanan setengah dari lebar lingkaran */
+            transform: translate(-50%, -50%); /* Pusatkan teks */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="index.html">UCP 1 PDW</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Miles <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favorite.html"> favorite</a>
+                <a href="aday.html">Waktu Saat Ini</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                Movie <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="movie.html">Movie</a>
+            </div>
+        </div>
+    </header>
+
+    <h1>THE MOVIE</h1>
+    <script>
+        window.onload = function () {
+            var circles = document.getElementsByClassName('circle');
+
+            for (var i = 0; i < circles.length; i++) {
+                circles[i].addEventListener('click', function () {
+                    this.classList.add('animate');
+                    var circle = this;
+                    setTimeout(function () {
+                        circle.classList.remove('animate');
+                    }, 1000);
+                });
+            }
+        };
+    </script>
+    <div class="circle-container">
+        <div class="circle">
+            <p>spider-man into spiderverse</p>
+        </div>
+        <div class="circle">
+            <p>spider-man across spiderverse</p>
+        </div>
+        <div class="circle">
+            <p>spider-man beyond the spiderverse</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>Muhammad Zuhair Zaidan 20220140059 - kelas B</p>
+            
+        </div>
+    </footer>
+</body>
+
+</html>
