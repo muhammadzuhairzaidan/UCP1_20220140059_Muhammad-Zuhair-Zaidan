@@ -18,17 +18,17 @@
             text-align: center;
         }
 
-        .circle-container {
+        .box-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 80vh;
         }
 
-        .circle {
+        .box {
             width: 250px;
             height: 250px;
-            border-radius: 50%;
+            border-radius: 10;
             background-color: rgb(66, 74, 77);
             display: flex;
             justify-content: center;
@@ -40,11 +40,11 @@
             position: relative; /* Tambahkan properti position */
         }
 
-        .circle:hover {
+        .box:hover {
             transform: scale(1.1);
         }
 
-        .circle p {
+        .box p {
             margin: 0; /* Hilangkan margin bawaan */
             position: absolute; /* Atur posisi absolut */
             top: 50%; /* Geser ke atas setengah dari tinggi lingkaran */
@@ -82,7 +82,7 @@
     <h1>THE MOVIE</h1>
     <script>
         window.onload = function () {
-            var circles = document.getElementsByClassName('circle');
+            var circles = document.getElementsByClassName('box');
 
             for (var i = 0; i < circles.length; i++) {
                 circles[i].addEventListener('click', function () {
@@ -95,14 +95,14 @@
             }
         };
     </script>
-    <div class="circle-container">
-        <div class="circle">
+    <div class="box-container">
+        <div class="box">
             <p>spider-man into spiderverse</p>
         </div>
-        <div class="circle">
+        <div class="box">
             <p>spider-man across spiderverse</p>
         </div>
-        <div class="circle">
+        <div class="box">
             <p>spider-man beyond the spiderverse</p>
         </div>
     </div>
